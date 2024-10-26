@@ -8,7 +8,5 @@ services:
     ports:
       - 42080:80
       - 42443:443
-    networks:
-      - front-network
     volumes:
       - /home/ubuntu/docker/truecommand:/data
