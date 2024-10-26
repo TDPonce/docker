@@ -1,0 +1,14 @@
+name: truecommand
+
+services:
+  truecommand:
+    container_name: truecommand
+    image: ixsystems/truecommand:latest
+    restart: unless-stopped
+    ports:
+      - 42080:80
+      - 42443:443
+    networks:
+      - front-network
+    volumes:
+      - /home/ubuntu/docker/truecommand:/data
