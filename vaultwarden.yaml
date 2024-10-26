@@ -1,0 +1,11 @@
+name: vaultwarden
+
+services:
+  vaultwarden:
+    container_name: vaultwarden
+    image: vaultwarden/server:latest
+    restart: unless-stopped
+    ports:
+      - 42002:80
+    volumes:
+      - /home/ubuntu/docker/vaultwarden:/data
